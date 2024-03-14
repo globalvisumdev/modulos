@@ -1,0 +1,81 @@
+
+  /* comienza footer municipalidad */
+
+  footer {
+    /* height: 20%; */
+    height: fit-content;
+    background-color: #efefef;
+  }
+
+  img.imgMunicipalidad {
+    width: 90px;
+    height: 90px;
+  }
+
+  img.imgMunicipalidadCba {
+    width: 230px;
+  }
+
+  .footerContentLeft {
+    display: flex;
+    align-items: center;
+    /* width: 50%; */
+    justify-content: center;
+  }
+
+  .footerContentRight {
+    /* width: 50%; */
+    color: #009ee2;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .divisorFooter {
+    width: 19px;
+    height: 106px;
+  }
+
+  .containerFooter {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* padding-left: 43.9062px; */
+    /* padding-right: 44.0938px; */
+    flex-wrap: wrap;
+    padding: 20px 40px;
+  }
+
+  .socialMedia {
+    width: 28.78px;
+    height: 36.09px;
+    margin: 0 5px;
+  }
+
+  .footerContact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .footerSocialMedia {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  span.webmail {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 918px) {
+    .footerSocialMedia {
+      justify-content: center;
+    }
+
+    .footerContact {
+      align-items: center;
+    }
+  }

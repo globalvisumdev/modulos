@@ -1,0 +1,69 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+} */
+.buttonProgress{
+  position: relative;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* height: 95px;
+  width: 360px; */
+  height: 40px;
+  /* width: 150px; */
+  width: 100%;
+  background: #2271ff;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+.buttonProgress.active{
+  height: 20px;
+  /* width: 275px; */
+  width: 100%;
+}
+.buttonProgress::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: #1348b9;
+  border-radius: 55px;
+  transition: all 4s ease-in-out;
+}
+.buttonProgress.active::before{
+  animation: layer 4s ease-in-out forwards;
+}
+@keyframes layer {
+  100%{
+    left: 0%;
+  }
+}
+.buttonProgress .content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  transition-delay: 0.2s;
+}
+.buttonProgress.active .content{
+  transform: translateY(60px);
+}
+.buttonProgress .content i,
+.buttonProgress .content .button-text{
+  color: #fff;
+}
+.buttonProgress .content .button-text{
+  font-size: 16px;
+  margin-left: 8px;
+}

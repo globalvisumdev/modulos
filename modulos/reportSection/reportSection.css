@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    position: relative;
+}
+
+body.dark {
+    transition: all 0.5s;
+    background-color: #222533;
+    color: #fff;
+}
+
+.container {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* width: 80%; */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    flex-direction: column;
+    margin-top: 65px;
+}
+
+.container h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: #2271ff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container .services {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+}
+
+.container .services .card{
+    width: 330px;
+    text-align: center;
+    /* background: #222; */
+    padding: 20px 15px;
+    margin: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 10px 6px 20px #c0c1c1;
+}
+
+body.dark .container .services .card{
+    background: #1a1c29;
+    box-shadow: 0 0 0 black;
+
+}
+
+.container .services .card:hover{
+    /* background: chocolate; */
+    background: #2271ff;
+}
+
+body.dark .container .services .card:hover{
+    background: #2271ff;
+}
+
+.container .services .card .content{
+    transition: 0.3s;
+}
+
+.container .services .card:hover .content{
+    transform: scale(1.07);
+}
+
+.container .services .card .content .icon{
+    padding: 5px 0;
+    /* color: white; */
+    color: #FEBA0B;
+}
+
+.container .services .card .content .icon i{
+    font-size: 40px;
+}
+
+.container .services .card:hover .content .title{
+    color: white;
+}
+
+.container .services .card .content .title{
+    padding: 5px 0;
+    font-size: 24px;
+    font-weight: 500;
+    /* color: chocolate; */
+    color: #2271ff;
+    transition: 0.3s;
+}

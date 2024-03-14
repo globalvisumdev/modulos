@@ -1,0 +1,248 @@
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.overlay {
+	background: rgba(0, 0, 0, .6);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 20;
+	transition: 0.1s;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup_custom {
+	background: #F8F8F8;
+	color: black;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+	border-radius: 15px;
+	padding: 10px;
+	text-align: center;
+	max-width: 600px;
+	width: 90%;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transform: scale(0.7);
+	opacity: 0;
+	overflow-y: auto;
+	max-height: 90%;
+}
+
+
+.popup_custom .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	color: #BBBBBB;
+}
+
+
+.popup_custom .btn-cerrar-popup .fa-xmark {
+	cursor: pointer;
+	transition: 0.5s ease all;
+	z-index: -1;
+}
+
+.popup_custom .btn-cerrar-popup .fa-xmark:hover {
+	color: #000;
+}
+
+/* .popup_custom h4 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+} */
+
+.popup_custom h4 {
+	font-size: 26px;
+	margin-bottom: 40px;
+	opacity: 0;
+}
+
+.popup_custom form .contenedor-inputs {
+	opacity: 0;
+}
+
+.popup_custom form .contenedor-buttons {
+	opacity: 0;
+}
+
+.popup_custom form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+
+.popup_custom form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #5E7DE3;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.popup_custom form .btn-submit:hover {
+	background: rgba(94, 125, 227, .9);
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup_custom.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+/* .popup_custom.active h3 { animation: entradaTitulo .8s ease .5s forwards; } */
+.popup_custom.active h4 {
+	animation: entradaSubtitulo .8s ease .2s forwards;
+}
+
+.popup_custom.active .contenedor-inputs {
+	animation: entradaInputs 0.5s linear 0.5s forwards;
+}
+
+.popup_custom.active .contenedor-buttons {
+	animation: entradaInputs 0.5s linear 0.5s forwards;
+}
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.btnPopUp {
+	width: 90px;
+	height: 40px;
+	border-radius: 22px;
+	border: none;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.btnPopUp:hover {
+	transform: scale(.9);
+}
+
+.btnRegistro {
+	width: 90px;
+	height: 40px;
+	border-radius: 22px;
+	border: none;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#btnNuevoServicio,
+.btnNuevoServicio {
+	background: #187318;
+}
+
+#btnCancelar,
+#btnCancelarServicio,
+.btnCancelarServicio {
+	background: #d01b1b;
+}
+
+.btnRegistro:hover {
+	transform: scale(.9);
+}
+
+
+/* ************************************************************************** */
+
+.contentPopUp {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+}
+
+img#imgPopUp {
+	height: 350px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+	margin-top: 20px;
+}
+
+
+.popUp_contentInfo {
+	display: flex;
+	flex-direction: column;
+	max-width: max-content;
+	align-items: flex-start;
+}
+
+.popUp_infoMovimiento,
+.popUp_infoUsuario {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #eeee;
+	border-radius: 15px;
+	gap: 10px;
+	padding: 5px;
+}
+
+span.infoComunication {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 7px;
+}

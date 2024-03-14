@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root{
+    /* --main-colorDM: #8f94fb; */
+    --main-colorDM: #5995fd;
+    --light-colorDM: #c2d8ff;
+    --lighter-colorDM: #f7f7ff;
+    --bg-colorDM: #fbfaff;
+}
+
+[data-theme="dark"]{
+    --main-colorDM: #1c2028;
+    --light-colorDM: #727597;
+    --bg-colorDM: #31357a;
+}
+/* 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    background-color: var(--bg-colorDM);
+} */
+
+/* .site{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
+#darkModeToggle {
+    transform: scale(0.3);
+    width: 0px;
+    /* position: absolute; */
+}
+.buttonDM{
+    position: relative;
+    width: 230px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: var(--main-colorDM);
+}
+
+
+.buttonDM > span{
+    position: absolute;
+    font-size: 2em;
+    font-weight: 600;
+    top: 50%;
+    margin-top: -26px;
+}
+
+.buttonDM > span:first-child{
+    left: -40%;
+}
+
+.buttonDM > span:last-child{
+    right: -40%;
+}
+
+.buttonDM label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.buttonDM input{
+    display: none;
+}
+
+.buttonDM .switcher{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.buttonDM .circle, .buttonDM .circle::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 20px;
+    /* background-color: var(--lighter-colorDM); */
+    background-color: #edd64f;
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform .5s, background-color .3s;
+}
+
+.buttonDM .circle::before{
+    top: 0;
+    left: 0;
+    transform: translate3d(-30px, -40px, 0) scale(0.2);
+    background-color: var(--main-colorDM);
+}
+
+.switcher .dots::before,
+.switcher .dots::after,
+.switcher .dots .dot-b{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--lighter-colorDM);
+    top: 25px;
+    right: 50px;
+    border-radius: 50%;
+    z-index: 0;
+    transition: transform .5s;
+}
+.switcher .dots::after{
+    top: 55%;
+    right: 38%;
+    transform: scale(0.4);
+}
+.switcher .dots .dot-b{
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .3s, transform .5s;
+}
+.switcher .star{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0.7em solid var(--lighter-colorDM);
+    border-left: 0.3em solid solid transparent;
+    transform: translate3d(190px, 90px, 0);
+    font-size: 6px;
+    opacity: 0;
+    transition: opacity .5s, transform .5s;
+}
+.switcher .star::before, .switcher .star::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0.6em;
+    left: -1em;
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid var(--lighter-colorDM);
+    border-left: 1em solid transparent;
+    transform: rotate(-35deg);
+}
+.switcher .star::after{
+    transform: rotate(35deg);
+}
+
+.buttonDM input:checked + .switcher .circle{
+    transform: translateX(110px);
+}
+
+.buttonDM input:checked + .switcher .circle::before{
+    transform: translate3d(-20px, -10px, 0) scale(0.8);
+}
+.buttonDM input:checked + .switcher .dots .dot-b,
+.buttonDM input:checked + .switcher .dots::before,
+.buttonDM input:checked + .switcher .dots::after{
+    transform: translateX(-80px) scale(0.25);
+}
+
+.buttonDM input:checked + .switcher .dots::after{
+    top: 60%;
+    right: 40%;
+    transform: translateX(-80px) scale(0.15);
+}
+.buttonDM input:checked + .switcher .dots .dot-b{
+    top: 50%;
+    right: 50%;
+    opacity: 1;
+    transform: scale(0.5);
+}
+
+.buttonDM input:checked + .switcher .star{
+    opacity: 1;
+    transform: translate3d(43px, 25px, 0);
+}
+
+[data-theme="light"] .buttonDM > span:last-child{
+    opacity: .25;
+}
+
+[data-theme="dark"] .buttonDM > span:last-child{
+    opacity: 1;
+    color: white;
+}
+
+[data-theme="dark"] .buttonDM > span:first-child{
+    opacity: 0.25;
+}
+
+

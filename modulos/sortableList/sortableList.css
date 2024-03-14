@@ -1,0 +1,104 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #ddd;
+    font-family: sans-serif;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-group{
+    /* width: 450px; */
+    background-color: #f5f5f5;
+}
+.list-group .list-group-item {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    flex-direction: column;
+    margin: 5px 0px;
+    background-color: white;
+}
+.list-group .list-group-item > div{
+    /* padding: 15px 0; */
+}
+.list-group .list-group-item .handle{
+    width: 50px;
+    /* background-color: #eee; */
+    /* border: 1px solid #ddd; */
+    cursor: grab;
+}
+.list-group .list-group-item .handle i.fa{
+    color: #555;
+    font-size: 15px;
+}
+.list-group .list-group-item .handle:hover i.fa{
+    color: #111;
+}
+.list-group .list-group-item .thumbanial{
+    padding: 0 10px;
+}
+.list-group .list-group-item .thumbanial img{
+    width: 50px;
+    border-radius: 50%;
+}
+.list-group .list-group-item .details{
+    flex: 1;
+}
+.list-group .list-group-item details span{
+    font-size: 16px;
+    color: #111;
+    padding: 0 5px 3px;
+}
+.list-group .list-group-item .details p{
+    color: #555;
+    font-size: 14px;
+    padding: 0 7px;
+}
+.list-group .list-group-item .btn {
+    width: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.list-group .list-group-item .btn i.fa{
+    color: #aaa;
+}
+.list-group .list-group-item .btn:hover i.fa{
+    color: #00acee;
+}
+
+.details span {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+}
+.list-group-item:hover {
+    transition: 0.5s all;
+    background-color: #e7edfe;
+}
+.list-group .selected {
+    background: #9cff9c !important;
+}
+
+.containerList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.subGroupSort {
+    background: #c5c5c5;
+    min-height: 20px;
+    padding: 5px;
+    border-radius: 0 0 15px 15px;
+}

@@ -1,0 +1,107 @@
+:root {
+    /* color-scheme: dark; */
+    --main-color: #2271ff;
+    --secondary-color: #5995fd;
+    --lighter-color: #e0e0e7;
+    --light-color: #b0b0c0;
+    --dark-color: #52505e;
+
+    --font-smaller: 14px;
+    --font-bigger: 20px;
+}
+
+
+.actionFB{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.actionFB .iconToggle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+}
+
+.actionFB.active .iconToggle{
+    /* transform: rotate(135deg); */
+    transform: rotate(90deg);
+}
+.actionFB ul{
+    right: -25px;
+    position: absolute;
+    bottom: 55px;
+    background: #fff;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0px 0px 15px 0px #ccc;
+}
+
+body.dark .actionFB ul{
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.actionFB.active ul{
+    bottom: 45px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin-bottom: 15px;
+
+    
+}
+.actionFB ul li{
+    color: black;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: all 0.2s;
+    /* transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+    
+}
+.active ul li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: all 0.1s;
+    /* transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+    
+}
+.actionFB ul li:hover{
+    font-weight: 600;
+}
+.actionFB ul li:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.actionFB ul li .icono{
+    font-size: 25px;
+    color: var(--main-color);
+    margin-right: 10px;
+}
+
+

@@ -1,0 +1,241 @@
+.result {
+    background-color: green;
+    color: #fff;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.containerQrScanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#reader__scan_region {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: 233px;
+    width: 520px;
+    border-radius: 7px;
+    transition: height 0.2s ease;
+}
+
+.wrapper.active {
+    height: 525px;
+}
+
+.wrapper form {
+    height: 210px;
+    display: flex;
+    user-select: none;
+    text-align: center;
+    border-radius: 7px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.2s ease;
+}
+
+.wrapper #divQR {
+    cursor: pointer;
+
+}
+
+.wrapper.active form {
+    height: 225px;
+    pointer-events: none;
+}
+
+.wrapper form img {
+    display: none;
+    max-width: 148px;
+}
+
+.wrapper.active form img {
+    display: block;
+}
+
+.wrapper.active form .content {
+    display: none;
+}
+
+.wrapper form .content i {
+    color: #0B85FF;
+    font-size: 55px;
+}
+
+.wrapper form .content p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.wrapper .details {
+    opacity: 0;
+    margin-top: 25px;
+    pointer-events: none;
+}
+
+.wrapper.active .details {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.wrapper .details textarea {
+    width: 100%;
+    height: 128px;
+    outline: none;
+    resize: none;
+    font-size: 18px;
+    background: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.wrapper textarea::-webkit-scrollbar {
+    width: 0px;
+}
+
+.wrapper textarea:hover::-webkit-scrollbar {
+    width: 5px;
+}
+
+.wrapper textarea:hover::-webkit-scrollbar-track {
+    background: none;
+}
+
+.wrapper textarea:hover::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 8px;
+}
+
+.wrapper .details .buttons {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .buttons button,
+.btnForm {
+    height: 55px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    background: #0B85FF;
+    transition: 0.5s all;
+    width: calc(100% / 2 - 10px);
+    margin: 2px;
+}
+
+.wrapper .buttons button:active {
+    transform: scale(0.95);
+}
+
+.wrapper .buttons button:hover,
+.btnForm:hover {
+    background: #5badff;
+}
+
+@media (max-width: 450px) {
+    .wrapper {
+        height: 233px;
+        width: 336px;
+    }
+
+    .wrapper.active {
+        height: 520px;
+    }
+}
+
+
+#formQR {
+    background-color: #f5f5f5;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+#messageQR {
+    text-align: center;
+    margin-bottom: 26px;
+    color: green;
+}
+
+#messageQRName {
+    font-size: 18px;
+    text-align: center;
+}
+
+#reader__status_span {
+    opacity: 0;
+}
+
+/* #reader__scan_region {
+        display: flex;
+        width: 334px;
+        min-height: 100px;
+        height: 233px;
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    #reader {
+        width: 334px !important;
+        border-radius: 30px;
+    } */
+
+/* video {
+    width: 334px;
+    border-radius: 32px;
+    } */
+
+/* #qr-shaded-region{
+    border-radius: 32px;
+    } */
+
+#result,
+#reader__dashboard_section_swaplink {
+    display: none !important;
+}
+
+div#reader__dashboard button {
+    height: 36px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    background: #0B85FF;
+    transition: 0.5s all;
+    margin: 2px;
+}
+
+div#reader {
+    width: 380px !important;
+    border-radius: 25px;
+}
+
+div#reader__dashboard_section_csr {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

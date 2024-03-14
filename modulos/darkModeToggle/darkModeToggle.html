@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="darkModeToggle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="id" class="darkModeToggle">
+        <div class="buttonDM">
+            <!-- <span>Light</span> -->
+            <label for="checkbox"></label>
+            <input type="checkbox" id="checkbox">
+            <div class="switcher">
+                <div class="circle"></div>
+                <div class="dots">
+                    <span class="dot-b"></span>
+                    <span class="star"></span>
+                </div>
+            </div>
+            <!-- <span>Dark</span> -->
+        </div>
+    </div>
+    
+    <script>
+        const switchBtn = document.querySelector('#checkbox');
+        const themeMode = localStorage.getItem('theme')
+
+        if (themeMode) {
+            document.documentElement.setAttribute('data-theme',themeMode);
+            if (themeMode === 'dark') {
+                switchBtn.checked = true;
+            }
+        }
+
+        function modeSwitch(e){
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme','dark');
+                localStorage.setItem('theme','dark');
+            }else{
+                document.documentElement.setAttribute('data-theme','light');
+                localStorage.setItem('theme','light');
+            }
+        }
+
+        switchBtn.addEventListener('change',modeSwitch,false)
+
+    </script>
+</body>
+</html>

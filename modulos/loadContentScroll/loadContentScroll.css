@@ -1,0 +1,56 @@
+.containerLoaderScrollBottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.loaderScrollBottom {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: rgb(77, 77, 77) rgb(77, 77, 77) transparent;
+    box-sizing: border-box;
+    animation: rotate 1s linear infinite;
+}
+
+.loaderScrollBottom::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent var(--primary-color) var(--primary-color);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: rotatenBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotatenBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

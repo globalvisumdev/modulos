@@ -1,0 +1,84 @@
+.terms-box {
+  max-width: 462px;
+  height: 600px;
+  background-color: #ffff;
+  /* color: #fff; */
+  /* font-family: "Montserrat"; */
+  padding: 30px 15px;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.terms-text{
+  padding: 0 20px;
+  height: 450px;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  /* color: #f1f1f1; */
+}
+
+.terms-text::-webkit-scrollbar{
+  width: 2px;
+  /* background-color: #282828; */
+}
+
+.terms-text::-webkit-scrollbar-thumb{
+  background-color: #64bcf4;
+}
+
+.terms-text h2{
+  text-transform: uppercase;
+}
+
+.terms-box h4{
+  font-size: 13px;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.terms-box h4 span{
+  color: #64bcf4;
+}
+
+.terms-box .buttons{
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.terms-box  .btn{
+  height: 50px;
+  width: calc(50% - 6px);
+  border: 0;
+  border-radius: 6px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+  transition: .3s  linear;
+  cursor: pointer;
+}
+
+.terms-box  .red-btn{
+  background-color: #d13639;
+}
+
+.terms-box  .gray-btn{
+  background-color: #282828;
+}
+
+.terms-box  .lightBlue-btn{
+  background-color: #64bcf4;
+}
+
+.terms-box  .btn:hover{
+  opacity: .6;
+}

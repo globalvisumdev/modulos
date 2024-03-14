@@ -1,0 +1,33 @@
+
+/* .container__info{
+    width: max-content;
+    overflow: hidden;
+} */
+/* .container__info .text{
+    position: relative;
+    color: #4070F4;
+    font-size: 30px;
+    font-weight: 600;
+} */
+/* .container__info .text.first-text{
+    color: black;
+} */
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    width: 100%;
+    background-color: #FFF;
+    border-left: 2px solid #4070F4;
+    animation: animate 3s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}

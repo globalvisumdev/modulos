@@ -1,0 +1,147 @@
+
+body{
+    overflow-x: hidden;
+}
+
+.toastDiv{
+    position: fixed;
+    /* position: absolute; */
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--toast-color);
+    overflow: hidden;
+    transform: translateX(calc(100% + 40px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    z-index: 50;
+}
+
+.hidden{
+    display: none;
+
+}
+
+.toastDiv.active{
+    transform: translateX(0%);
+}
+
+.toastDiv .toast-content{
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: var(--toast-color);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.toastDiv .message .text{
+    /* font-size: 20px; */
+    font-weight: 400;;
+    color: #666666;
+}
+
+.toastDiv .message .text.text-1{
+    font-weight: 600;
+    color: #333;
+}
+
+.toastDiv .closeIcon{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    color: black;
+
+}
+
+.toastDiv .closeIcon:hover{
+    opacity: 1;
+}
+
+.toastDiv .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toastDiv .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--toast-color);
+}
+
+.progress.active:before{
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}
+
+.buttonToast{
+    padding: 12px 20px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: #0e4bf1;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttonToast:hover{
+    background-color: #3566ec;
+}
+
+.toastDiv.active ~ .buttonToast{
+    pointer-events: none;
+}
+
+@media (max-width: 570px) {
+
+    .toastDiv{
+        padding: 0px;
+    }
+
+    .toast-content .message {
+        margin: 0 6px;
+        width: 80%;
+    }
+
+    .toast-content .check{
+        margin-left: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+}

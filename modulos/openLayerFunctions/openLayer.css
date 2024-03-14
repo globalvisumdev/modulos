@@ -1,0 +1,472 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Maven pro', sans-serif;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+} */
+
+
+
+.map-openlayers {
+    width: 100vw;
+    height: 100vh;
+    cursor: grab;
+}
+
+.myLocation {
+    /* position: fixed;
+    bottom: 25px;
+    right: 25px; */
+    width: 50px;
+    height: 50px;
+    background: #2271ff;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    font-size: 26px;
+    /* transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blog-card {
+    box-shadow: none;
+    cursor: auto;
+    background: none;
+    flex-direction: column !important;
+}
+
+.blog-card p:first-of-type:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: var(--secondary-color);
+    width: 205px;
+    top: -0.75rem;
+    border-radius: 3px;
+}
+
+.blog-card .description:before {
+    display: none;
+}
+
+.blog-card .description {
+    background: none;
+}
+
+.blog-card .description .read-more {
+    text-align: center;
+}
+
+p.read-more {
+    color: var(--main-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#infoRuta {
+    width: 100%;
+    height: 0;
+    background: white;
+    /* position: absolute; */
+    /* bottom: 0; */
+    border-radius: 30px 30px 0 0;
+    transition: 0.5s all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 1px 0px 20px 3px #8e8e8e;
+}
+
+.infoRutaActive {
+    height: 35vh !important;
+}
+
+.infoRutaSwipeUp {
+    height: 85vh !important;
+}
+
+.btnCerrarRuta {
+    width: 180px;
+    height: 50px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+div#infoRutaDestino {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+div#infoRutaDuracion {
+    font-size: 20px;
+}
+
+.infoRutaContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom {
+    /* background: rgb(255 255 255 / 60%); */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.containerLocation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    padding: 13px;
+}
+
+div#infoRutaIndicaciones {
+    width: 90%;
+    height: 60%;
+    overflow: auto;
+}
+
+.containerIndicacion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* border-bottom: 0.1px solid gray; */
+    height: fit-content;
+    margin: 6px 0;
+}
+
+.iconIndicacion {
+    font-size: 25px;
+    background: whitesmoke;
+    color: blue;
+    border-radius: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.textIndicación {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.infoRutaSlider {
+    display: flex;
+    width: 60px;
+    height: 25px;
+    background: #2271ff;
+    color: white;
+    border-radius: 15px;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.iconSwipeUp {
+    transition: 0.5s;
+}
+
+.infoRutaSwipeUp .iconSwipeUp {
+    transform: rotate(180deg);
+}
+
+.map_addressLabel {
+    background: white;
+    box-shadow: var(--box-shadow);
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin-top: 60px;
+    margin-left: 200px;
+    max-width: 164px;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.map_bottomInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    background: white;
+    box-shadow: var(--box-shadow);
+    border-radius: 25px;
+    padding: 1px 2px;
+    margin-top: 49px;
+    user-select: none;
+    font-size: 11px;
+    font-weight: 500;
+    gap: 3px;
+}
+
+.map_bottomInfo img {
+    width: 13px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
+.iconoTelefono,
+.iconoWpp {
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.iconoTelefono {
+    color: #2d73dc;
+}
+
+.iconoWpp {
+    color: green;
+}
+
+
+#filter {
+    background-color: #00a2ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 0px rgb(58 58 58 / 53%);
+    z-index: 10;
+}
+
+.iconFilter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1e2a40;
+    color: white;
+    font-size: 30px;
+}
+
+.overlayFilter {
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: 0.5s all ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.activeFilter {
+    transform: translateX(0%);
+}
+
+.iconClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.iconClose:hover {
+    transform: scale(0.75);
+}
+
+.containerFilter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+ul.list-items {
+    height: 350px;
+    overflow: hidden;
+}
+
+div#vehiculosDisponibles {
+    overflow-x: scroll;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.btnAplicarFiltros {
+    width: 200px;
+    height: 50px;
+    background-color: #00a2ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btnLimpiarFiltros {
+    width: 100%;
+    height: 50px;
+    background-color: #00a2ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.containerItemFilter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-width: 320px;
+    align-items: center;
+}
+
+.itemFilter {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+    height: 50px;
+    width: 80%;
+    padding: 0 16px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.itemFilter:hover {
+    background-color: #e7edfe;
+}
+
+.itemFilter .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.itemFilter.checkedFilter .checkbox {
+    background-color: #4070f4;
+    border-color: #4070f4;
+}
+
+.itemFilter .item-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.checkbox .check-icon {
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.itemFilter.checkedFilter .check-icon {
+    transform: scale(1);
+}
+
+.itemFilter img {
+    width: 35px;
+    position: absolute;
+    right: 10px;
+}
+
+.divLottieEmergencia {
+    position: absolute;
+    top: -45px;
+    cursor: pointer;
+}
+
+.divLottieEmergenciaRotura {
+    position: absolute;
+    top: -27px;
+    cursor: pointer;
+}
+
+.lottieEmergencia {
+    width: 75px;
+}
+
+#tipoGeometriasContainer {
+    position: absolute;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: max-content;
+    gap: 5px;
+}
+
+
+select#tipoGeometria {
+    border: none;
+    padding: 5px;
+}

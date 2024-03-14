@@ -1,0 +1,233 @@
+:root {
+    /* color-scheme: dark; */
+    --main-color: #2271ff;
+    
+    --secondary-color: #5995fd;
+    --lighter-color: #e0e0e7;
+    --light-color: #b0b0c0;
+    --dark-color: #52505e;
+
+    --font-smaller: 14px;
+    --font-bigger: 20px;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+}
+
+.stepProgress {
+    /* width: 100%; */
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background:#d7e9e9; */
+    background: aliceblue;
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: inset 0px 0px 8px rgb(0 0 0 / 20%);
+}
+
+.stepProgressWidth{
+    width: 100%;
+
+}
+
+body.dark .stepProgress {
+    background: #1a1c29;
+    color: #fff;
+}
+
+.stepProgress .head {
+    text-align: center;
+}
+
+.stepProgress .head_1,
+.stepTitle .head_1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 5px;
+    text-align: center;
+}
+
+body.dark .stepProgress .head_1,
+body.dark .stepTitle .head_1 {
+    color: #fff;
+}
+
+.stepProgress .head_1 span,
+.stepTitle .head_1 span {
+    color: var(--main-color);
+}
+
+.stepProgress .head_2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 3px;
+}
+
+.stepProgress ul {
+    display: flex;
+    margin-top: 10px;
+    padding-left: 0rem;
+    margin-bottom: 0rem;
+}
+
+.stepProgress ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stepProgress ul li .icon {
+    font-size: 35px;
+    /* color: var(--secondary-color); */
+    color: #FEBA0B;
+    margin: 0 40px;
+}
+
+ul li .text {
+    font-size: 14px;
+    font-weight: 600;
+    /* color: var(--main-color); */
+}
+
+/* Progress Div Css  */
+
+.stepProgress ul li .progressDiv {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin: 4px 0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: 0.7s all;
+    box-shadow: inset 0px 6px 6px rgb(0 0 0 / 30%);
+}
+
+.stepProgress .progressDiv::after {
+    /* content: " "; */
+    position: absolute;
+    width: 125px;
+    height: 5px;
+    background-color: rgba(68, 68, 68, 0.781);
+    right: 30px;
+}
+
+.stepProgress .one::after {
+    width: 0;
+    height: 0;
+}
+
+.stepProgress ul li .progressDiv .uil {
+    display: none;
+}
+
+.stepProgress ul li .progressDiv p {
+    margin-top: 9px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Active Css  */
+
+.stepProgress ul li .active {
+    /* background-color: var(--main-color); */
+    background-color: green;
+    display: grid;
+    place-items: center;
+    transform: rotate(360deg);
+}
+
+.stepProgress ul li .active .check {
+    opacity: 1;
+}
+
+.stepProgress li .active::after {
+    background-color: var(--main-color);
+}
+
+.stepProgress ul li .active p {
+    display: none;
+}
+
+.stepProgress ul li .active .uil {
+    font-size: 20px;
+    display: flex;
+}
+
+.stepProgress .check {
+    opacity: 0;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+/* Responsive Css  */
+
+/* @media (max-width: 980px) {
+    ul{
+        flex-direction: column;
+    }
+    ul li{
+        flex-direction: row;
+    }
+    ul li .progressDiv{
+        margin: 0 30px;
+    }
+    .progressDiv::after{
+        width: 5px;
+        height: 55px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        height: 0;
+    }
+    ul li .icon{
+        margin: 15px 0;
+    }
+}
+
+@media (max-width:600px) {
+    .head .head_1{
+        font-size: 24px;
+    }
+    .head .head_2{
+        font-size: 16px;
+    }
+} */
+.btnForm {
+    height: 55px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    background: #0B85FF;
+    transition: 0.5s all;
+    /* transition: transform 0.3s ease; */
+    width: calc(100% / 2 - 10px);
+    margin: 2px;
+}
+
+.btnForm:active {
+    transform: scale(0.95);
+}
+
+.btnForm:hover {
+    /* background: #5badff; */
+    transform: scale(1.05);
+}

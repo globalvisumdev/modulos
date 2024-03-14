@@ -1,0 +1,67 @@
+.containerPopper {
+    width: max-content;
+    margin: 0 10px;
+}
+.elementPopper {
+    display: inline-block;
+    cursor: pointer;
+    /* width: 134px;
+    height: 120px;
+    background-image: url('https://popper.js.org/images/popcorn-box.svg'); */
+}
+
+.tooltipPopper {
+    margin: 10px;
+    max-width: 300px;
+    visibility: hidden;
+    display: inline-block;
+    background: #ffffff;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 15px 0px #969696;
+
+    /* padding: 10px; */
+    /* background: #fff; */
+    /* border-radius: 15px; */
+    /* transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+}
+
+.arrowToolTip,
+.arrowToolTip::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+    left: 50%;
+}
+
+.arrowToolTip {
+    visibility: hidden;
+    display: none;
+}
+
+.arrowToolTip::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+}
+
+.tooltipPopper[data-popper-placement^='top']>.arrowToolTip {
+    bottom: -4px;
+}
+
+.tooltipPopper[data-popper-placement^='bottom']>.arrowToolTip {
+    top: -4px;
+}
+
+.tooltipPopper[data-popper-placement^='left']>.arrowToolTip {
+    right: -4px;
+}
+
+.tooltipPopper[data-popper-placement^='right']>.arrowToolTip {
+    left: -4px;
+}

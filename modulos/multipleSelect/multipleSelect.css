@@ -1,0 +1,151 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.multipleSelect body {
+    background-color: #e3f2fd;
+} */
+
+.multipleSelect {
+    position: relative;
+    /* max-width: 320px; */
+    /* width: 100%; */
+    margin-top: 30px;
+}
+
+.multipleSelect .select-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.multipleSelect .select-btn .btn-text {
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+}
+
+.multipleSelect .select-btn .arrow-dwn {
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #6e93f7;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.multipleSelect .select-btn.open .arrow-dwn {
+    transform: rotate(-180deg);
+}
+
+.multipleSelect .list-items {
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.multipleSelect .select-btn.open~.list-items {
+    display: block;
+}
+
+.multipleSelect .list-items .item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.multipleSelect .list-items .item:hover {
+    background-color: #e7edfe;
+}
+
+.multipleSelect .item .item-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.multipleSelect .item .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.multipleSelect .item.checked .checkbox {
+    background-color: #4070f4;
+    border-color: #4070f4;
+}
+
+.multipleSelect .checkbox .check-icon {
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.multipleSelect .item.checked .check-icon {
+    transform: scale(1);
+}
+
+.multipleSelect .search {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.multipleSelect .search .icon {
+    top: 50%;
+    left: 15px;
+    color: #999;
+    font-size: 20px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.multipleSelect .search input {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 0 0 0 43px;
+    border: 1px solid #B3B3B3;
+}
+
+.multipleSelect .search input:focus {
+    padding-left: 42px;
+    border: 2px solid #4285f4;
+}
+
+.multipleSelect .search input::placeholder {
+    color: #bfbfbf;
+}

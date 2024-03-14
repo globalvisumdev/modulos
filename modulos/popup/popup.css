@@ -1,0 +1,248 @@
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+#overlayPopUp {
+	background: rgba(0, 0, 0, .6);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 20;
+	transition: 0.1s;
+}
+
+#overlayPopUp.active {
+	visibility: visible;
+}
+
+#overlayPopUp .popup {
+	background: #F8F8F8;
+	color: black;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+	border-radius: 15px;
+	padding: 10px;
+	text-align: center;
+	max-width: 600px;
+	width: 90%;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transform: scale(0.7);
+	opacity: 0;
+	overflow-y: auto;
+	max-height: 90%;
+}
+
+
+#overlayPopUp .popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	color: #BBBBBB;
+}
+
+
+#overlayPopUp .popup .btn-cerrar-popup .fa-xmark {
+	cursor: pointer;
+	transition: 0.5s ease all;
+}
+
+#overlayPopUp .popup .btn-cerrar-popup .fa-xmark:hover {
+	color: #000;
+}
+
+#overlayPopUp
+/* .popup h4 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+} */
+
+#overlayPopUp .popup h4 {
+	font-size: 26px;
+	margin-bottom: 40px;
+	opacity: 0;
+}
+
+#overlayPopUp .popup form .contenedor-inputs {
+	opacity: 0;
+}
+
+#overlayPopUp .popup form .contenedor-buttons {
+	opacity: 0;
+}
+
+#overlayPopUp .popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+
+#overlayPopUp .popup form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #5E7DE3;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+#overlayPopUp .popup form .btn-submit:hover {
+	background: rgba(94, 125, 227, .9);
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+
+#overlayPopUp .popup.active {
+	transform: scale(1);
+	opacity: 1;
+}
+
+#overlayPopUp .popup.active h4 {
+	animation: entradaSubtitulo .8s ease .2s forwards;
+}
+
+#overlayPopUp .popup.active .contenedor-inputs {
+	animation: entradaInputs 0.5s linear 0.5s forwards;
+}
+
+#overlayPopUp .popup.active .contenedor-buttons {
+	animation: entradaInputs 0.5s linear 0.5s forwards;
+}
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+#overlayPopUp .btnPopUp {
+	width: 90px;
+	height: 40px;
+	border-radius: 22px;
+	border: none;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#overlayPopUp .btnPopUp:hover {
+	transform: scale(.9);
+}
+
+#overlayPopUp .btnRegistro {
+	width: 90px;
+	height: 40px;
+	border-radius: 22px;
+	border: none;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#overlayPopUp #btnNuevoServicio,
+#overlayPopUp .btnNuevoServicio {
+	background: #187318;
+}
+
+#overlayPopUp #btnCancelar,
+#overlayPopUp #btnCancelarServicio,
+#overlayPopUp .btnCancelarServicio {
+	background: #d01b1b;
+}
+
+#overlayPopUp .btnRegistro:hover {
+	transform: scale(.9);
+}
+
+
+/* ************************************************************************** */
+
+#overlayPopUp .contentPopUp {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+}
+
+#overlayPopUp img#imgPopUp {
+	height: 350px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+	margin-top: 20px;
+}
+
+
+#overlayPopUp .popUp_contentInfo {
+	display: flex;
+	flex-direction: column;
+	max-width: max-content;
+	align-items: flex-start;
+}
+
+#overlayPopUp .popUp_infoMovimiento,
+#overlayPopUp .popUp_infoUsuario {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #eeee;
+	border-radius: 15px;
+	gap: 10px;
+	padding: 5px;
+}
+
+#overlayPopUp span.infoComunication {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 7px;
+}

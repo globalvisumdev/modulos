@@ -1,0 +1,167 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #353b48;
+  } */
+.containerStars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 17px;
+}
+
+.star-wrapper {
+  /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; */
+  direction: rtl;
+}
+
+.star-wrapper a,
+.star-wrapper svg {
+  /* font-size: 4em; */
+  color: #ababab;
+  text-decoration: none;
+  transition: all 0.5s;
+  margin: 4px;
+  font-weight: 100;
+}
+
+.star-wrapper a:hover,
+.star-wrapper svg:hover {
+  color: gold;
+  transform: scale(1.3);
+  font-weight: 900;
+}
+
+.star-wrapper a.activeStar,
+.star-wrapper svg.activeStar {
+  color: gold;
+  font-weight: 900;
+}
+
+.s1:hover~a,
+.s1.activeStar~a,
+.s1:hover~svg,
+.s1.activeStar~svg {
+  color: gold;
+  font-weight: 900;
+}
+
+.s2:hover~a,
+.s2.activeStar~a,
+.s2:hover~svg,
+.s2.activeStar~svg {
+  color: gold;
+  font-weight: 900;
+}
+
+.s3:hover~a,
+.s3.activeStar~a,
+.s3:hover~svg,
+.s3.activeStar~svg {
+  color: gold;
+  font-weight: 900;
+}
+
+.s4:hover~a,
+.s4.activeStar~a,
+.s4:hover~svg,
+.s4.activeStar~svg {
+  color: gold;
+  font-weight: 900;
+}
+
+.s5:hover~a,
+.s5.activeStar~a,
+.s5:hover~svg,
+.s5.activeStar~svg {
+  color: gold;
+  font-weight: 900;
+}
+
+.wraper {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+
+.divCalificaciones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  user-select: none;
+}
+
+.detalleCalificacion {
+  width: 300px;
+  text-align: initial;
+}
+
+div#containerStars {
+  margin: 15px 0px;
+  border-top: 1px solid #e7e6e6;
+  border-bottom: 1px solid #e7e6e6;
+  padding: 15px;
+}
+
+.detalleCalificacion b {
+  text-transform: capitalize;
+}
+
+.divLottie {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h4#tituloPopUp {
+  margin: 0;
+}
+
+.lottieElement {
+  border: 0px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.5s all;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.lottieElement>span {
+  position: absolute;
+  bottom: 0;
+}
+
+.disabledLottie {
+  filter: grayscale(100%);
+}
+
+.activeLottie {
+  transform: scale(1.10);
+}
+
+textarea#comentario {
+  border-radius: 18px;
+  width: 90%;
+  padding: 15px;
+  resize: none;
+}
+
+.titleComentario {
+  text-align: initial;
+  margin-left: 10px;
+  margin-top: 10px;
+}
